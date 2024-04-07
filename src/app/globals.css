@@ -2,32 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../assets/fonts/Rubik.ttf) format("truetype");
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @font-face {
+    font-family: "Iosevka";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../assets/fonts/Iosevka.ttf) format("truetype");
+  }
+  hr {
+    @apply border-solid border-b2;
+    border-width: 1px;
+  }
+  .hide {
+    @apply hidden;
+  }
+  .caret {
+    @apply text-b5 h-8 w-8;
+  }
+  .caret-container {
+    @apply cursor-pointer fixed flex justify-center items-center bottom-10 right-10 p-1 border-solid border-b2 bg-b1 rounded;
+    border-width: 1px;
+  }
+  .flex-container {
+    @apply flex flex-row justify-start items-center flex-wrap;
+  }
+  .post-container {
+    @apply flex flex-col border-solid rounded border-2;
+  }
+  .tag-container {
+    @apply bg-b1 border-b2 text-blue mx-8 my-2 px-2 py-1 text-lg border-solid border-2 rounded;
+  }
+  .markdown h1 {
+    @apply font-sans text-4xl font-bold my-2;
+  }
+  .markdown h2 {
+    @apply font-sans text-3xl font-bold my-2;
+  }
+  .markdown h3 {
+    @apply font-sans text-2xl font-bold my-2;
+  }
+  .markdown h4 {
+    @apply font-sans text-xl font-bold my-2;
+  }
+  .markdown h5 {
+    @apply font-sans text-lg font-bold my-2;
+  }
+  .markdown h6 {
+    @apply font-sans text-base font-bold my-2;
+  }
+  .content pre {
+    @apply p-8 font-mono my-8 rounded-lg bg-b2;
+  }
+  .content code {
+    @apply px-0;
+  }
+  .markdown p {
+    @apply font-sans;
+  }
+  .markdown ul {
+    @apply list-disc ml-4 my-2 text-b4 marker:text-b4;
+  }
+  .markdown ol {
+    @apply list-decimal ml-4 my-2 text-b4 marker:text-b4;
   }
 }
