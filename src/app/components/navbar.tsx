@@ -10,7 +10,7 @@ export default function Navbar() {
     <div>
       <div className="w-full flex justify-between items-center">
         <div
-          className="cursor-pointer flex mx-16 my-8 flex-nowrap text-nowrap"
+          className="cursor-pointer flex mx-4 md:mx-16 my-4 md:my-8 flex-nowrap text-nowrap"
           onClick={() => {
             router.push("/");
           }}
@@ -39,9 +39,9 @@ export default function Navbar() {
             about
           </div>
         </div>
-        <Bars3Icon className="cursor-pointer h-8 w-8 text-b4 mx-16 my-8 md:hidden" onClick={() => {setMenu(!menu)}}></Bars3Icon>
+        <Bars3Icon className="cursor-pointer h-8 w-8 text-b4 mx-4 md:mx-16 my-4 md:my-8 md:hidden" onClick={() => {setMenu(!menu)}}></Bars3Icon>
       </div>
-      <div className="mx-16 md:hidden" hidden={menu}>
+      <div className="mx-8 md:hidden" hidden={menu}>
         <div
           className="cursor-pointer my-4 text-2xl text-b4 hover:text-blue"
           onClick={() => {
