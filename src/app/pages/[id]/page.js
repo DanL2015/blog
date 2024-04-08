@@ -38,8 +38,8 @@ export default function Post({ params }) {
   var words = post.data.title.split(" ");
   return (
     <main>
-      <article className="text-b4 md:mx-96 m-24">
-        <div className="flex-container flex-col md:flex-row">
+      <article className="text-b4 lg:mx-96 flex flex-col m-16">
+        <div className="flex-container">
           <div className="flex-container">
             <div className="text-b3 text-4xl">{words[0]}&nbsp;</div>
             <div className="text-b5 text-4xl">{words.slice(1).join(" ")}</div>
@@ -47,7 +47,7 @@ export default function Post({ params }) {
           <div className="flex-1"></div>
           <div className="text-b3 text-xl">{post.data.date}</div>
         </div>
-        <div className="flex-container">
+        <div className="flex-container my-4">
           <div className="text-b3 text-xl">Tags:</div>
           {post.data.tags &&
             post.data.tags.map((tag, index) => {

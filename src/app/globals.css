@@ -38,7 +38,7 @@
     @apply flex flex-col border-solid rounded border-2;
   }
   .tag-container {
-    @apply bg-b1 border-b2 text-blue mx-8 my-2 px-2 py-1 text-lg border-solid border-2 rounded;
+    @apply bg-b1 border-b2 text-blue mx-8 px-2 py-1 text-lg border-solid border-2 rounded;
   }
   .markdown h1 {
     @apply font-sans text-4xl font-bold my-2;

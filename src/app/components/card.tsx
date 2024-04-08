@@ -6,12 +6,12 @@ export default function Card({ post }: { post: any }) {
   return (
     <Link href={`/pages/${post.id}`}>
       <div className="post-container my-8 p-6 border-b2">
-        <div className="flex-container flex-col md:flex-row">
-          <div className="flex-container">
+        <div className="flex-container flex-row md:justify-start items-center">
+          <div className="flex-container my-2">
             <div className="text-b3 text-2xl">{words[0]}&nbsp;</div>
             <div className="text-b5 text-2xl">{words.slice(1).join(" ")}</div>
           </div>
-          <div className="flex-container">
+          <div className="flex-container hidden md:flex">
             {post.tags &&
               post.tags.map((tag:string, index:number) => {
                 return (
@@ -22,9 +22,10 @@ export default function Card({ post }: { post: any }) {
               })}
           </div>
           <div className="flex-1"></div>
-          <div className="text-b3 text-lg invisible md:visible">
+          <div className="text-b3 text-lg hidden md:flex">
             {post.date}
           </div>
+          <ChevronRightIcon className="text-b4 md:hidden w-8 h-8"></ChevronRightIcon>
         </div>
         <div className="text-b4 text-lg">{post.description}</div>
       </div>

@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <main>
-      <div className="mx-96 flex flex-col m-24">
+      <div className="lg:mx-96 flex flex-col m-16">
         <div className="flex-container">
           <div className="text-b3 text-4xl">About&nbsp;</div>
           <div className="text-b5 text-4xl">the Blog</div>

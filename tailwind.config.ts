@@ -29,7 +29,7 @@ const config: Config = {
       screens: {
         'sm': '576px',
         'md': '1000px',
-        'lg': '1440px',
+        'lg': '1400px',
       },
     },
   },
