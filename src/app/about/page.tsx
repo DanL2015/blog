@@ -8,7 +8,7 @@ export default function About() {
         </div>
         <hr className="w-48 my-8"></hr>
         <p className="text-b4 text-lg">
-          This is my personal blog, where I'll post about anything computer
+          This is my personal blog, where I&apos;ll post about anything computer
           related I find interesting. (That is, if I remember that this site
           still exists).
           Thanks for stopping by!

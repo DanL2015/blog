@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 
-export default function Card({ post }) {
+export default function Card({ post }: { post: any }) {
   var words = post.title.split(" ");
   return (
     <Link href={`/pages/${post.id}`}>
@@ -13,7 +13,7 @@ export default function Card({ post }) {
           </div>
           <div className="flex-container">
             {post.tags &&
-              post.tags.map((tag, index) => {
+              post.tags.map((tag:string, index:number) => {
                 return (
                   <div key={index} className="tag-container">
                     {tag}

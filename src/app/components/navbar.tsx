@@ -13,7 +13,7 @@ export default function Navbar() {
       >
         <div className="font-sans text-3xl text-b3 font-bold">d</div>
         <div className="font-sans text-3xl text-blue font-bold">.</div>
-        <div className="font-sans text-3xl text-b4 font-bold">liu's Blog</div>
+        <div className="font-sans text-3xl text-b4 font-bold">liu&apos;s Blog</div>
       </div>
       <div className="flex mx-16 my-8">
         <div

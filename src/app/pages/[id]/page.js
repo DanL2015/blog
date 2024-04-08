@@ -61,7 +61,6 @@ export default function Post({ params }) {
         <hr className="w-48 my-8"></hr>
         <Markdown
           className="markdown"
-          children={post.content}
           remarkPlugins={[remarkMath]}
           rehypePlugins={[rehypeKatex]}
           components={{
@@ -73,9 +72,10 @@ export default function Post({ params }) {
                   {...rest}
                   PreTag="div"
                   style={oneDark}
-                  children={String(children).replace(/\n$/, "")}
                   language={match[1]}
-                />
+                >
+                  {String(children).replace(/\n$/, "")}
+                </SyntaxHighlighter>
               ) : (
                 <code {...rest} className={className}>
                   {children}
@@ -83,7 +83,9 @@ export default function Post({ params }) {
               );
             },
           }}
-        />
+        >
+          {post.content}
+        </Markdown>
         <div className="flex-container my-4">
           <div className="flex-1"></div>
           <div className="text-b3 text-3xl">Daniel&nbsp;</div>
